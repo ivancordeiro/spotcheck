@@ -2989,6 +2989,8 @@ function enviarSpotchecks(spotcheck_ids) {
                                         var id_spotcheck_remoto = data[1];
 
                                         $("#enviando-spotcheck .lista-spotchecks-enviando li a[data-id=" + id_spotcheck_local + "]").find(".item-after").html("Enviando e-mails...");
+										
+										alert('teste 1: id_spotcheck_local:' + + id_spotcheck_local ', id_spotcheck_remoto:' + id_spotcheck_remoto );
 
                                         //Gera os relatórios e envia os e-mails  
                                         $.ajax({
@@ -3002,6 +3004,8 @@ function enviarSpotchecks(spotcheck_ids) {
                                                 data = data.split("|");
                                                 id_spotcheck_local = data[0];
                                                 id_spotcheck_remoto = data[1];
+												
+												alert('teste2: id_spotcheck_local:' + + id_spotcheck_local ', id_spotcheck_remoto:' + id_spotcheck_remoto );
 
                                                 //Muda entregue para 1
                                                 mudaAtributo("id", id_spotcheck_local, "entregue", "1", "spotcheck.json", function() {
